@@ -32,14 +32,14 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
+      content: '9841080030',
       link: 'tel:+15551234567',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: 'San Francisco, CA',
-      link: 'https://maps.google.com',
+      content: 'Bhaktapur',
+      link: 'https://www.google.com/maps/place/Bhat-Bhateni+Supermarket+-+Thimi+Bhaktapur/@27.6751568,85.3973116,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1a8837917c4f:0x741730908aed9974!8m2!3d27.6751568!4d85.3973116!16s%2Fg%2F11fy2jl6jh?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D',
     },
   ];
 
@@ -220,14 +220,10 @@ const ContactSection = () => {
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM PST</span>
+                    <span>9:00 AM - 6:00 PM </span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM PST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
+                    <span>Saturday & Sunday</span>
                     <span>Closed</span>
                   </div>
                 </div>

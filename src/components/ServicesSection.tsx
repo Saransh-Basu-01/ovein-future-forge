@@ -14,7 +14,7 @@ const ServicesSection = () => {
       icon: Globe,
       title: 'Web Development',
       description: 'Full-stack web applications built with modern frameworks and technologies. From concept to deployment, we create scalable and performant solutions.',
-      features: ['React & Next.js', 'Node.js & APIs', 'Database Design', 'Cloud Deployment'],
+      features: ['React & Next.js', 'Node.js & APIs', 'Database Design', 'Cloud Deployment','Django','Flask',],
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
@@ -28,7 +28,7 @@ const ServicesSection = () => {
       icon: Zap,
       title: 'Microagents',
       description: 'Intelligent autonomous agents that automate workflows, process data, and make decisions to enhance productivity and efficiency.',
-      features: ['Workflow Automation', 'Data Processing', 'Decision Making', 'API Integration'],
+      features: ['Workflow Automation', 'Data Processing', 'Decision Making', 'API Integration','n8n'],
       gradient: 'from-emerald-500 to-teal-500',
     },
     {

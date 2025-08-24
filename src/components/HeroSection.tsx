@@ -222,9 +222,9 @@ const HeroSection = () => {
               className="grid grid-cols-3 gap-8 pt-8"
             >
               {[
-                { number: '50+', label: 'Projects Delivered' },
-                { number: '25+', label: 'Happy Clients' },
-                { number: '3+', label: 'Years Experience' },
+                { number: '30+', label: 'Projects Delivered' },
+                { number: '15+', label: 'Happy Clients' },
+                { number: '1+', label: 'Years Experience' },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl font-bold text-primary">{stat.number}</div>

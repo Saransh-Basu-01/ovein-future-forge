@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail,Globe } from 'lucide-react';
+import dipesh from '../photos/dipesh.jpg'
+import sabi from '../photos/sabi.jpg'
+import jhapa from '../photos/jhapali.jpg'
+import kriman from '../photos/kriman.jpg'
+import sar from '../photos/sar.jpg'
 
 const TeamSection = () => {
   const [ref, inView] = useInView({
@@ -10,58 +15,58 @@ const TeamSection = () => {
 
   const teamMembers = [
     {
-      name: 'Alex Chen',
-      role: 'CEO & AI Architect',
-      bio: 'Visionary leader with 8+ years in AI development and strategic business growth.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+      name: 'Sabinaya Bajracharya',
+      role: 'CEO & Founder',
+      bio: '"Frontend developer with 1+ year of experience building responsive and user-friendly web applications."',
+      image: sabi,
       socials: {
-        linkedin: 'https://linkedin.com',
+        linkedin: 'https://www.linkedin.com/in/sabinaya-bajracharya-464416357/',
         twitter: 'https://twitter.com',
-        github: 'https://github.com',
+        github: 'https://github.com/Bajra-sabi',
       },
     },
     {
-      name: 'Sarah Rodriguez',
-      role: 'Lead Frontend Developer',
-      bio: 'Frontend specialist crafting beautiful, intuitive user experiences with modern technologies.',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b2e4f4a3?w=400&h=400&fit=crop&crop=face',
+      name: 'Prajwal Sitoula',
+      role: 'CTO & Co-Founder',
+      bio: 'AI and backend specialist building intelligent, scalable systems that power seamless user experiences.',
+      image: jhapa,
       socials: {
-        linkedin: 'https://linkedin.com',
-        github: 'https://github.com',
+        linkedin: 'https://www.linkedin.com/in/prajwal-sitoula/',
+        github: 'https://github.com/CrypticLuminary',
         twitter: 'https://twitter.com',
       },
     },
     {
-      name: 'Marcus Johnson',
-      role: 'Backend Engineer',
+      name: 'Dipesh Suwal',
+      role: 'CFO & Co-Founder',
       bio: 'Scalable systems architect ensuring robust infrastructure and seamless performance.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
+      image: dipesh,
       socials: {
-        linkedin: 'https://linkedin.com',
-        github: 'https://github.com',
+        linkedin: 'https://www.linkedin.com/in/dipesh-suwal-769169358/',
+        github: 'https://github.com/dipeshsuwal9',
         email: 'marcus@ovein.com',
       },
     },
     {
-      name: 'Dr. Emily Watson',
-      role: 'ML Research Scientist',
-      bio: 'PhD in Machine Learning, pushing the boundaries of AI innovation and research.',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
+      name: 'Kriman Basi',
+      role: 'COO & Co-founder',
+      bio: 'Backend engineer, architecting scalable systems and robust infrastructures to power modern applications.',
+      image: kriman,
       socials: {
-        linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        linkedin: 'https://www.linkedin.com/in/kriman-basi-5278b7355/',
+         github: 'https://github.com/Kreeman08',
         email: 'emily@ovein.com',
       },
     },
     {
-      name: 'David Kim',
-      role: 'DevOps & Security Lead',
-      bio: 'Infrastructure expert ensuring secure, scalable deployments and optimal performance.',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
+      name: 'Saransha Basu',
+      role: 'CMO & Co-founder',
+      bio: 'Full-stack developer and AI/ML engineer, building intelligent, scalable applications from front-end to backend.',
+      image: sar,
       socials: {
-        linkedin: 'https://linkedin.com',
-        github: 'https://github.com',
-        twitter: 'https://twitter.com',
+        linkedin: 'https://www.linkedin.com/in/saransh-basu-86a4152b5/',
+        github: 'https://github.com/Saransh-Basu-01',
+        portfolio: 'https://www.saranshabasu.com.np/',
       },
     },
   ];
@@ -85,21 +90,17 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        {/* Team Grid - Unique Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {/* First Row - 2 members */}
-          <div className="lg:col-span-3 grid md:grid-cols-2 gap-8 mb-8">
-            {teamMembers.slice(0, 2).map((member, index) => (
-              <TeamMemberCard key={index} member={member} index={index} inView={inView} />
-            ))}
-          </div>
-
-          {/* Second Row - 3 members */}
-          {teamMembers.slice(2).map((member, index) => (
-            <TeamMemberCard key={index + 2} member={member} index={index + 2} inView={inView} />
+       {/* Team Grid - Single Row, 5 Members */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
+          {teamMembers.map((member, index) => (
+            <TeamMemberCard 
+              key={index} 
+              member={member} 
+              index={index} 
+              inView={inView} 
+            />
           ))}
         </div>
-
         {/* Join Team CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -132,12 +133,13 @@ const TeamSection = () => {
 };
 
 const TeamMemberCard = ({ member, index, inView }: { member: any; index: number; inView: boolean }) => {
-  const socialIcons = {
-    linkedin: Linkedin,
-    twitter: Twitter,
-    github: Github,
-    email: Mail,
-  };
+const socialIcons = {
+  linkedin: Linkedin,
+  twitter: Twitter,
+  github: Github,
+  email: Mail,
+  portfolio: Globe,
+};
 
   return (
     <motion.div

@@ -105,8 +105,8 @@ const Footer = () => {
               <h4 className="font-semibold text-foreground mb-4">Contact</h4>
               <div className="space-y-2 text-muted-foreground">
                 <p>hello@ovein.com</p>
-                <p>+1 (555) 123-4567</p>
-                <p>San Francisco, CA</p>
+                <p>9841080030</p>
+                <p>Bhatapur</p>
               </div>
             </motion.div>
           </div>
